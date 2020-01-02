@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3634184-B645-44DA-80E0-4C07A1338E7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Net.FreeORM.TransactionManagement</RootNamespace>
+    <AssemblyName>Net.FreeORM.TransactionManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Net.FreeORM.Data.Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FreeTransactionLog.cs" />
+    <Compile Include="TransactionLogDL.cs" />
+    <Compile Include="TransactionManager.cs" />
+    <Compile Include="TransactionTypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Net.FreeORM.Base\Net.FreeORM.Base.csproj">
+      <Project>{91ecf436-e8fd-49a8-9517-2ef736450bbe}</Project>
+      <Name>Net.FreeORM.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Net.FreeORM.Data\Net.FreeORM.Data.csproj">
+      <Project>{802c0505-9ff9-48e8-a4d2-4a0193aef8b6}</Project>
+      <Name>Net.FreeORM.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Net.FreeORM.Entity\Net.FreeORM.Entity.csproj">
+      <Project>{ff6f80da-9d5e-457e-aa28-688f536a67da}</Project>
+      <Name>Net.FreeORM.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Net.FreeORM.ErrorHandling\Net.FreeORM.ErrorHandling.csproj">
+      <Project>{3a5f0518-1573-4db2-8b1d-1678ea74eefd}</Project>
+      <Name>Net.FreeORM.ErrorHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Net.FreeORM.Logic\Net.FreeORM.Logic.csproj">
+      <Project>{0d6f1b77-408b-47a2-bffa-d6ec6c4b3cb8}</Project>
+      <Name>Net.FreeORM.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd /s /q "$(ProjectDir)\\obj\\Debug"
+rd /s /q "$(ProjectDir)\\obj\\Release"
+rd /s /q "$(ProjectDir)\\bin\\Release"
+rd /s /q "$(ProjectDir)\\bin\\Debug"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
