@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appsettings>
+
+  <current-culture>tr-TR</current-culture>
+
+  <dblogin>
+    <db-properties>
+
+      <properties name="buroSQL" driver-type="sqlserver" conn-str="">
+        <property key="Server" value="KRK" />
+        <property key="Initial Catalog" value="BuroTestDB" />
+        <property key="User Id" value="PWMyRQ==" />
+        <property key="Password" value="ek1USXpNVEk=" />
+      </properties>
+
+      <properties name="sqlce" driver-type="sqlserverce" conn-str="">
+        <property key="Data Source" value="C:\FreeORM\Bookmarks\Bookmarks.sdf" />
+        <property key="Password" value="aWIyOXJiV0Z5YTNNPWJYbA==" />
+      </properties>
+
+      <properties name="main" driver-type="sqlserver" conn-str="">
+        <property key="Server" value="KRK\SQLEXPRESS" />
+        <property key="Initial Catalog" value="NorthWind" />
+        <property key="User Id" value="PWMyRQ==" />
+        <property key="Password" value="ek1USXpNVEk=" />
+      </properties>
+      <properties name="sqlsrvr" driver-type="sqlserver" conn-str="Server=.\SQLEXPRESS;Initial Catalog=NorthWind;User Id=sa;Password=123456Qw;">
+        <property key="Server" value=".\SQLEXPRESS" />
+        <property key="Initial Catalog" value="NorthWind" />
+        <property key="User Id" value="PWMyRQ==" />
+        <property key="Password" value="ek1USXpNVEk=" />
+      </properties>
+
+    </db-properties>
+
+  </dblogin>
+
+  <appconfig>
+    <row-count>20</row-count>
+    <log-setting>
+      <log-type>fl</log-type>
+      <log-path>C:\\FreeORM\\log\\log.txt</log-path>
+    </log-setting>
+    <picture-settings>
+      <picture-settings-folder>C:\\FreeORM\\picturedata\\</picture-settings-folder>
+    </picture-settings>
+  </appconfig>
+</appsettings>

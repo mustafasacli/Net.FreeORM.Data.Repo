@@ -1,0 +1,29 @@
+Title : An Exception handled at FormLoad method in FrmBookmarkList class.
+Log Code : FrmBookmarkList_FormLoad_ERR
+Log Type : Error
+Message : 'Net.FreeORM.Logic.Util.ConfUtil' tür başlatıcısı özel durum döndürdü.
+Stack Trace :    konum: Net.FreeORM.Logic.Util.ConfUtil.BuildPropertyNew(String propName)
+   konum: Net.FreeORM.Logic.BaseDal.BaseDL..ctor(String connectionName) c:\Users\Krkt\Desktop\VS_Projects\Net.FreeORM.Data\Net.FreeORM.Logic\BaseDal\BaseDL.cs içinde: satır 45
+   konum: BookmarksStocker.Source.DL.BookmarksDL..ctor() c:\Users\Krkt\Desktop\VS_Projects\Net.FreeORM.Data\BookmarksStocker\Source\DL\BookmarksDL.cs içinde: satır 7
+   konum: BookmarksStocker.Source.Views.FrmBookmarkList.FormLoad(Object sender, EventArgs e) c:\Users\Krkt\Desktop\VS_Projects\Net.FreeORM.Data\BookmarksStocker\Source\Views\FrmBookmarkList.cs içinde: satır 203
+Log Time : 2016-01-21 00:16:30
+/* ------------------------------------------------*/
+Title : An Exception handled at FormLoad method in FrmBookmarkList class.
+Log Code : FrmBookmarkList_FormLoad_ERR
+Log Type : Error
+Message : 29. satırda, 6 konumundaki 'db-properties' başlangıç etiketi 'dblogin' bitiş etiketiyle eşleşmiyor. Satır 31, konum 5.
+Stack Trace :    konum: System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   konum: System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   konum: System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   konum: System.Xml.XmlTextReaderImpl.ParseEndElement()
+   konum: System.Xml.XmlTextReaderImpl.ParseElementContent()
+   konum: System.Xml.XmlTextReaderImpl.Read()
+   konum: System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   konum: System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   konum: System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   konum: System.Xml.XmlDocument.Load(XmlReader reader)
+   konum: System.Xml.XmlDocument.Load(String filename)
+   konum: Net.FreeORM.Logic.Util.ConfUtil.PrepareConf() c:\Users\Krkt\Desktop\VS_Projects\Net.FreeORM.Data\Net.FreeORM.Logic\Util\ConfUtil.cs içinde: satır 214
+   konum: Net.FreeORM.Logic.Util.ConfUtil..cctor() c:\Users\Krkt\Desktop\VS_Projects\Net.FreeORM.Data\Net.FreeORM.Logic\Util\ConfUtil.cs içinde: satır 37
+Log Time : 2016-01-21 00:16:31
+/* ------------------------------------------------*/
