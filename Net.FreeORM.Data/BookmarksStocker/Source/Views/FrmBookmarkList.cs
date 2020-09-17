@@ -32,9 +32,9 @@ namespace BookmarksStocker.Source.Views
         {
             try
             {
+                InitializeComponent();
                 bookMan = new BookmarkManager();
                 exportMan = new ExportManager();
-                InitializeComponent();
                 rdbtnCreationtime.Checked = true;
                 rdbtnStartsWith.Checked = true;
                 IsDateFilteringChecked(false);
